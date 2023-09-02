@@ -1,0 +1,17 @@
+@import 'main';
+
+.introduction-video {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+
+
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+     background-color: var(--primary-500);
+
+  }
+}
