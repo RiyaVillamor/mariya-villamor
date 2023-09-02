@@ -22,12 +22,17 @@
     .who-is-coding {
         text-align: center;
         margin-bottom: 2rem;
-
+    
         h2 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
         }
-    }
+      }
+    
+      .section-body {
+        margin-top: 3.9rem;
+        
+      }
 
     .section-content {
         display: flex;
@@ -35,6 +40,11 @@
         align-items: center;
         gap: 1.2rem;
 
+        p {
+            font-size: 1.1rem;
+            margin: 1rem;
+          }
+          
         .card {
             display: flex;
             flex-direction: column;
@@ -51,10 +61,6 @@
         }
     }
 
-    p {
-        font-size: 1.1rem;
-        margin: 1rem;
-    }
 }
 
 .logo {
@@ -65,18 +71,18 @@
 .card img {
     filter: grayscale(60%);
     transition: filter 0.3s;
-  }
-  
-  
-  .card:hover img {
+}
+
+
+.card:hover img {
     filter: grayscale(0%);
-  }
-  
-  
-  .animated-card img {
+}
+
+
+.animated-card img {
     transition: transform 0.3s;
-  }
-  
-  .animated-card:hover img {
+}
+
+.animated-card:hover img {
     transform: scale(1.1);
-  }
+}

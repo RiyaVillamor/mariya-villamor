@@ -18,21 +18,21 @@ const Section = () => {
 
                 {/* Content */}
                 <div className="section-content">
-                    <Link to="#" className="card animated-card">
+                    <Link to="/home" className="card animated-card">
                         <img src="./home.png" alt="Home" />
-                        <span>Home</span>
+                        <p>Home</p>
                     </Link>
-                    <Link to="#" className="card animated-card">
+                    <Link to="/home" className="card animated-card">
                         <img src="./about.png" alt="About" />
-                        <span>About</span>
+                        <p>About</p>
                     </Link>
-                    <Link to="#" className="card animated-card">
+                    <Link to="/home" className="card animated-card">
                         <img src="./projects.png" alt="Projects" />
-                        <span>Projects</span>
+                        <p>Projects</p>
                     </Link>
-                    <Link to="#" className="card animated-card">
+                    <Link to="/home" className="card animated-card">
                         <img src="./contacts.png" alt="Contact" />
-                        <span>Contact</span>
+                        <p>Contact</p>
                     </Link>
                 </div>
             </div>
