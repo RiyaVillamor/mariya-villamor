@@ -13,7 +13,7 @@ const Home = () => {
       <div className="home-body">
         <div className="header-logo">
           <img
-            src="./src/assets/favicon.png"
+            src="./favicon.png"
             alt="mariya-logo"
           />
         </div>
