@@ -26,7 +26,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a href="https://drive.google.com/drive/folders/15w5fVG5pQ9zbEk40g6BIn0hH6LOzddpK" target="_blank" rel="noopener noreferrer" className="resume-link">
-            <FontAwesomeIcon icon={faFilePdf} />
+            <FontAwesomeIcon icon={faFilePdf} /> <span>Resume</span>
           </a>
         </div>
       </div>

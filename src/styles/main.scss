@@ -7,6 +7,8 @@
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 /* Set the base font size */
 html {
@@ -102,7 +104,7 @@ html {
 
 /* Fonts */
 $headingFont: 'Montserrat', sans-serif;
-$bodyFont: 'Montserrat', sans-serif;
+$bodyFont: 'Bebas Neue', sans-serif;
 $smallText: 0.7em;
 
 /* Rest of the variables */
@@ -124,7 +126,7 @@ body {
     --white: #fff;
 
     background-color: var(--grey-200);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue','Bebas Neue', sans-serif;
     font-weight: 400;
     line-height: 1;
     color: var(--black);
