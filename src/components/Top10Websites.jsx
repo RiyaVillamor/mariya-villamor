@@ -7,11 +7,11 @@ const Top10Websites = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4; // Number of items per page
   const top10Items = [
-    'https://via.placeholder.com/300x200.png?text=Websites+1',
-    'https://via.placeholder.com/300x200.png?text=Websites+2',
-    'https://via.placeholder.com/300x200.png?text=Websites+3',
-    'https://via.placeholder.com/300x200.png?text=Websites+4',
-    'https://via.placeholder.com/300x200.png?text=Websites+5',
+    '/nexus.png',
+    '/techblazers.png',
+    '/exploredia.png',
+    '/cuisina.png',
+    '/mariyaposter.png',
     // Add URLs for other websites
   ];
 
