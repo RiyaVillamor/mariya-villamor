@@ -4,6 +4,7 @@ import IntroductionVideo from './pages/IntroductionVideo.jsx';
 import Section from './pages/Section.jsx';
 import Header from './components/Header.jsx';
 import Home from './pages/Home';
+import Construction from './components/WebConstruction.jsx';
 
 const App = () => {
   const [videoEnded, setVideoEnded] = useState(false);
@@ -26,6 +27,7 @@ const App = () => {
                 <>
                   <Header />
                   <Home />
+                  <Construction />
                 </>
               } />
             </Routes>
