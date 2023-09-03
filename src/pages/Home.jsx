@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-import '../styles/Home.scss';
+import Top10Websites from '../components/Top10Websites';
 
 const Home = () => {
   return (
@@ -20,12 +20,12 @@ const Home = () => {
         <div className="series">
           <p>Hello, I'm</p>
         </div>
-        <div className="movie-title">
-          {/* Movie title */}
+        <div className="website-title">
+          {/* website title */}
           <h1>MARIYA</h1>
         </div>
         <div className="summary">
-          {/* Movie summary */}
+          {/* website summary */}
           <p>
             a passionate web developer with a love for creating
             amazing web experiences. I enjoy working on both front-end and back-end
@@ -40,6 +40,7 @@ const Home = () => {
             <FontAwesomeIcon icon={faInfoCircle} /> More Info
           </button>
         </div>
+        <Top10Websites />
       </div>
     </div>
   );

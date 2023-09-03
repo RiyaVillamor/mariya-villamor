@@ -1,0 +1,85 @@
+.top-10-items {
+    margin-top: 4.2rem;
+    text-align: left;
+    position: absolute;
+  
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .item-list {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+    }
+  
+    .arrow-button {
+      background-color: transparent;
+      color: var(--accent-300);
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+  
+    .left-arrow {
+      order: -1;
+    }
+  
+    .right-arrow {
+      order: 1;
+    }
+  
+    .item-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+  
+      .logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        max-width: 1.5rem;
+        margin: .30rem;
+      }
+  
+      .websites-number {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 1.2rem;
+        color: var(--white);
+        font-weight: bold;
+        z-index: 2;
+        padding: .32rem;
+        background-color: var(--accent-300);
+        border-radius: 0 5px 0 0;
+      }
+    }
+  
+    .websites-poster {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      max-height: 300px;
+    }
+  
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.3rem;
+    }
+  
+    // Style Font Awesome icons
+    .arrow-button svg {
+      font-size: 2rem;
+    }
+  
+    .hidden {
+      display: none;
+    }
+  }
+  
