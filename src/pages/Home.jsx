@@ -40,11 +40,13 @@ const Home = () => {
     // Add array for other websites soon
   ];
 
-  const [currentWebsite, setCurrentWebsite] = useState(websiteConfigs[0]);
+  const [currentWebsiteIndex, setCurrentWebsiteIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleWebsiteChange = (configIndex) => {
-    setCurrentWebsite(websiteConfigs[configIndex]);
+  const currentWebsite = websiteConfigs[currentWebsiteIndex];
+
+  const handleWebsiteChange = (index) => {
+    setCurrentWebsiteIndex(index);
   };
 
   const openModal = () => {
@@ -82,15 +84,17 @@ const Home = () => {
             <FontAwesomeIcon icon={faInfoCircle} /> More Info
           </button>
         </div>
-        <Top10Websites handleWebsiteChange={handleWebsiteChange} />
+        <Top10Websites websiteConfigs={websiteConfigs} handleWebsiteChange={handleWebsiteChange} />
       </div>
       {/* Check if the modal should be open and render it */}
- 
+      {isModalOpen && (
         <Modal
-        imageUrl={currentWebsite.backgroundImageUrl}
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-      />
+          imageUrl={currentWebsite.backgroundImageUrl}
+          isOpen={isModalOpen}
+          onRequestClose={closeModal}
+          summary={currentWebsite.summary}
+        />
+      )}
     </div>
   );
 };

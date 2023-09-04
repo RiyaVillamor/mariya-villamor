@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'react-modal'; 
+import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faTimes, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -9,6 +9,13 @@ import '../styles/Modal.scss';
 Modal.setAppElement('#root');
 
 const CustomModal = ({ imageUrl, isOpen, onRequestClose }) => {
+  const similarWebsites = [
+    { name: 'Similar Website 1', imageUrl: '/nexus.png' },
+    { name: 'Similar Website 2', imageUrl: '/nexus.png' },
+    { name: 'Similar Website 3', imageUrl: '/nexus.png' },
+    // Add more similar websites here
+  ];
+
   return (
     <Modal
       isOpen={isOpen}
@@ -46,19 +53,12 @@ const CustomModal = ({ imageUrl, isOpen, onRequestClose }) => {
           <div className="more-like-this">
             <h3>More Like This</h3>
             <div className="similar-websites">
-              <div className="similar-website">
-                <img src="/nexus.png" alt="Similar website 1" />
-                <p>Similar website 1</p>
-              </div>
-              <div className="similar-website">
-                <img src="/nexus.png" alt="Similar Website 2" />
-                <p>Similar website 2</p>
-              </div>
-              <div className="similar-website">
-                <img src="/nexus.png" alt="Similar Website 3" />
-                <p>Similar website 3</p>
-              </div>
-              {/* Add more similar websites/cards here */}
+              {similarWebsites.map((website, index) => (
+                <div className="similar-website" key={index}>
+                  <img src={website.imageUrl} alt={website.name} />
+                  <p>{website.name}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

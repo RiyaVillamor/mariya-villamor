@@ -10,9 +10,9 @@
     z-index: 4;
     border-radius: 10px;
     position: absolute;
-}
-
-.modal-content {
+  }
+  
+  .modal-content {
     background-color: var(--primary-500);
     color: var(--white);
     border-radius: 5px;
@@ -23,64 +23,61 @@
     overflow-y: auto;
     max-height: 90vh;
     z-index: 5;
-
-
+  
     &::-webkit-scrollbar {
-        width: 0.1em;
+      width: 0.1em;
     }
-
+  
     /* Style the scrollbar track */
     &::-webkit-scrollbar-track {
-        background: transparent;
+      background: transparent;
     }
-
+  
     /* Style the scrollbar thumb */
     &::-webkit-scrollbar-thumb {
-        background-color: var(--primary-500);
-        border-radius: 10px;
+      background-color: var(--primary-500);
+      border-radius: 10px;
     }
-
-}
-
-.modal-header {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.modal-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    position: relative;
-
-    .button-and-links {
+  
+    .modal-header {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+  
+      .button-and-links {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         gap: 10px;
-
+  
         .play-button {
-            background-color: var(--accent-300);
-            color: var(--white);
-            border: none;
-            border-radius: 3px;
-            padding: 7px 18px;
-            font-size: 1rem;
-            cursor: pointer;
+          background-color: var(--accent-300);
+          color: var(--white);
+          border: none;
+          border-radius: 3px;
+          padding: 7px 18px;
+          font-size: 1rem;
+          cursor: pointer;
         }
-    }
-
-    img {
+      }
+  
+      img {
         max-width: 100%;
         height: 100%;
         border-radius: 0;
         /* Remove border-radius */
         object-fit: cover;
-    }
-
-    .close-button {
+      }
+  
+      .close-button {
         background-color: var(--accent-300);
         color: var(--white);
         font-size: 1rem;
@@ -98,69 +95,70 @@
         /* Adjust the top position as needed */
         right: 10px;
         /* Adjust the right position as needed */
+      }
     }
-}
-
-.website-links {
-    display: flex;
-    gap: 1rem;
-    padding: .5rem;
-
-    a {
+  
+    .website-links {
+      display: flex;
+      gap: 1rem;
+      padding: .5rem;
+  
+      a {
         color: var(--white);
         font-size: 1.2rem;
         text-decoration: none;
         transition: color 0.3s ease;
-
+  
         &:hover {
-            color: var(--grey-500);
+          color: var(--grey-500);
         }
+      }
     }
-}
-
-.website-info {
-    text-align: left;
-
-    h2 {
+  
+    .website-info {
+      text-align: left;
+  
+      h2 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
-    }
-
-    p {
+      }
+  
+      p {
         font-size: 1rem;
         margin-bottom: 0.5rem;
+      }
     }
-}
-
-.more-like-this {
-    text-align: left;
-    margin-top: 20px;
-
-    h3 {
+  
+    .more-like-this {
+      text-align: left;
+      margin-top: 20px;
+  
+      h3 {
         font-size: 1.2rem;
         margin-bottom: 1rem;
         margin-top: 1rem;
-    }
-
-    .similar-websites {
-        /* Remove the max-height property to allow the "More Like This" section to scroll */
-        /* max-height: 300px; */
-        /* overflow-y: auto; */
-        color: rgb(240, 144, 18);
-    }
-
-    .similar-website {
-        text-align: center;
-
-        img {
+      }
+  
+      .similar-websites {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // Create a 2-column grid
+        gap: 20px; // Adjust the gap as needed
+  
+        .similar-website {
+          text-align: center;
+  
+          img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
-        }
-
-        p {
+          }
+  
+          p {
             font-size: 1rem;
             margin-top: 0.5rem;
+          }
         }
+      }
     }
-}
+  }
+  
