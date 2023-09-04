@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faTimes, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faTimes, faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Modal.scss';
 
@@ -9,7 +9,7 @@ import '../styles/Modal.scss';
 Modal.setAppElement('#root');
 
 const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
-  const { websiteTitle, summary, collaborator, backgroundImageUrl, similarWebsites } = websiteData;
+  const { websiteTitle, summary, collaborator, backgroundImageUrl, similarWebsites, githubLink, vercelLink } = websiteData;
 
   return (
     <Modal
@@ -31,12 +31,16 @@ const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
               <FontAwesomeIcon icon={faPlay} /> Play
             </button>
             <div className="website-links">
-              <a href="https://github.com/yourgithublink" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <a href="https://vercel.com/yourvercellink" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
-              </a>
+              {githubLink && (
+                <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faGithub} /> 
+                </a>
+              )}
+              {vercelLink && (
+                <a href={vercelLink} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faExternalLinkAlt} /> 
+                </a>
+              )}
             </div>
           </div>
           <div className="website-info">

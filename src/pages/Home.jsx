@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faInfoCircle, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Top10Websites from '../components/Top10Websites';
 import CustomModal from '../components/Modal';
 
@@ -12,7 +13,9 @@ const Home = () => {
       websiteTitle: 'MARIYA',
       summary: 'a passionate web developer with a love for creating amazing web experiences. I enjoy working on both front-end and back-end technologies and am always excited to take on new challenges.',
       backgroundImageUrl: '/mariyaposter1.png',
-      collaborator: null,  
+      collaborator: null,
+      githubLink: 'https://github.com/RiyaVillamor/mariya-villamor',
+      vercelLink: 'https://mariyavillamor.vercel.app/',
       similarWebsites: [
         { name: 'Similar Website 1', imageUrl: '/nexus1.png' },
         { name: 'Similar Website 2', imageUrl: '/techblazers1.png' },
@@ -23,7 +26,9 @@ const Home = () => {
       websiteTitle: 'NEXUS',
       summary: 'a vibrant social networking platform, fostering connections, and empowering expression. It offers unique profiles, tailored content, and top-notch privacy for a fulfilling online experience. Join nexus now!',
       backgroundImageUrl: '/nexus1.png',
-      collaborator: 'Lymar Paller',  
+      collaborator: 'Lymar Paller',
+      githubLink: 'https://github.com/LymarPaller/nexus',
+      vercelLink: 'https://nexus-three-ruddy.vercel.app/',
       similarWebsites: [
         { name: 'Similar Website 1', imageUrl: '/mariyaposter1.png' },
         { name: 'Similar Website 2', imageUrl: '/techblazers1.png' },
@@ -34,7 +39,9 @@ const Home = () => {
       websiteTitle: 'TECHBLAZERS',
       summary: ' is your go-to resource for web development. With a comprehensive library, coding language updates, and a vibrant community, it is the hub for aspiring developers. Dive in and blaze your tech trail.',
       backgroundImageUrl: '/techblazers1.png',
-      collaborator: null, 
+      collaborator: null,
+      githubLink: 'https://github.com/RiyaVillamor/Techblazers',
+      vercelLink: 'https://techblazers.vercel.app/',
       similarWebsites: [
         { name: 'Similar Website 1', imageUrl: '/nexus1.png' },
         { name: 'Similar Website 2', imageUrl: '/mariyaposter1.png' },
@@ -45,7 +52,9 @@ const Home = () => {
       websiteTitle: 'EXPLOREDIA',
       summary: 'is your gateway to global discovery. It offers flags, capitals, currencies, and essential information, empowering travelers, students, and explorers to explore the world effortlessly.',
       backgroundImageUrl: '/exploredia1.png',
-      collaborator: 'Roldan Feliciano',  
+      collaborator: 'Roldan Feliciano',
+      githubLink: 'https://github.com/RiyaVillamor/Exploredia',
+      vercelLink: 'https://exploredia.vercel.app/',
       similarWebsites: [
         // Add similar websites for EXPLOREDIA here
       ],
@@ -56,6 +65,8 @@ const Home = () => {
       summary: 'is a culinary haven for Filipinos seeking daily meal inspiration. With step-by-step recipes, course filters, and skill-building, it simplifies cooking for college students, solo-living adolescents, and adults.',
       backgroundImageUrl: '/cuisina1.png',
       collaborator: null,
+      githubLink: 'https://github.com/RiyaVillamor/Cuisina',
+      vercelLink: 'https://vercel.com/', // CHANGE Vercel link here soon
       similarWebsites: [
         // Add similar websites for CUISINA here
       ],
