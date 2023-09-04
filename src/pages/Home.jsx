@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faInfoCircle, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import Top10Websites from '../components/Top10Websites';
+import Modal from '../components/Modal';
 
 const Home = () => {
   const websiteConfigs = [
@@ -36,13 +37,22 @@ const Home = () => {
       summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet aliquam arcu. Nulla facilisi. Proin fringilla quam ac odio auctor facilisis. Vivamus auctor neque eu lectus egestas, at vulputate velit euismod.',
       backgroundImageUrl: '/cuisina1.png',
     },
-    // Add more configurations for other websites
+    // Add array for other websites soon
   ];
 
   const [currentWebsite, setCurrentWebsite] = useState(websiteConfigs[0]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleWebsiteChange = (configIndex) => {
     setCurrentWebsite(websiteConfigs[configIndex]);
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -68,12 +78,19 @@ const Home = () => {
           <button className="play-button">
             <FontAwesomeIcon icon={faPlay} /> Play
           </button>
-          <button className="info-button">
+          <button className="info-button" onClick={openModal}>
             <FontAwesomeIcon icon={faInfoCircle} /> More Info
           </button>
         </div>
         <Top10Websites handleWebsiteChange={handleWebsiteChange} />
       </div>
+      {/* Check if the modal should be open and render it */}
+ 
+        <Modal
+        imageUrl={currentWebsite.backgroundImageUrl}
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+      />
     </div>
   );
 };
