@@ -3,41 +3,62 @@ import '../styles/Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import Top10Websites from '../components/Top10Websites';
-import Modal from '../components/Modal';
+import CustomModal from '../components/Modal';
 
 const Home = () => {
   const websiteConfigs = [
     {
-      seriesTitle: 'Hello, I\'m',
+      seriesTitle: "Hello, I'm",
       websiteTitle: 'MARIYA',
       summary: 'a passionate web developer with a love for creating amazing web experiences. I enjoy working on both front-end and back-end technologies and am always excited to take on new challenges.',
-      backgroundImageUrl: '/mariyaposter1.png'
+      backgroundImageUrl: '/mariyaposter1.png',
+      similarWebsites: [
+        { name: 'Similar Website 1', imageUrl: '/nexus1.png' },
+        { name: 'Similar Website 2', imageUrl: '/techblazers1.png' },
+         
+      ],
     },
     {
       seriesTitle: 'We link Worlds',
       websiteTitle: 'NEXUS',
       summary: 'a vibrant social networking platform, fostering connections, and empowering expression. It offers unique profiles, tailored content, and top-notch privacy for a fulfilling online experience. Join nexus now!',
-      backgroundImageUrl: '/nexus1.png'
+      backgroundImageUrl: '/nexus1.png',
+      similarWebsites: [
+        { name: 'Similar Website 1', imageUrl: '/mariyaposter1.png' },
+        { name: 'Similar Website 2', imageUrl: '/techblazers1.png' },
+        
+      ],
     },
     {
       seriesTitle: 'Introducing Canvas 2.0',
       websiteTitle: 'TECHBLAZERS',
-      summary: ' is your go-to resource for web development. With a comprehensive library, coding language updates, and a vibrant community, it is the hub for aspiring developers. Dive in and blaze your tech trail.',
-      backgroundImageUrl: '/techblazers1.png'
+      summary: 'is your go-to resource for web development. With a comprehensive library, coding language updates, and a vibrant community, it is the hub for aspiring developers. Dive in and blaze your tech trail.',
+      backgroundImageUrl: '/techblazers1.png',
+      similarWebsites: [
+        { name: 'Similar Website 1', imageUrl: '/nexus1.png' },
+        { name: 'Similar Website 2', imageUrl: '/mariyaposter1.png' },
+   
+      ],
     },
     {
       seriesTitle: 'Your Ultimate Country Guide',
       websiteTitle: 'EXPLOREDIA',
       summary: 'is your gateway to global discovery. It offers flags, capitals, currencies, and essential information, empowering travelers, students, and explorers to explore the world effortlessly.',
-      backgroundImageUrl: '/exploredia1.png'
+      backgroundImageUrl: '/exploredia1.png',
+      similarWebsites: [
+       
+      ],
     },
     {
       seriesTitle: 'Go On. Get your recipe out.',
       websiteTitle: 'CUISINA',
       summary: 'is a culinary haven for Filipinos seeking daily meal inspiration. With step-by-step recipes, course filters, and skill-building, it simplifies cooking for college students, solo-living adolescents, and adults.',
       backgroundImageUrl: '/cuisina1.png',
+      similarWebsites: [
+       
+      ],
     },
-    // Add array for other websites soon
+    // Add configurations for other websites
   ];
 
   const [currentWebsiteIndex, setCurrentWebsiteIndex] = useState(0);
@@ -88,11 +109,10 @@ const Home = () => {
       </div>
       {/* Check if the modal should be open and render it */}
       {isModalOpen && (
-        <Modal
-          imageUrl={currentWebsite.backgroundImageUrl}
+        <CustomModal
+          websiteData={currentWebsite} // Pass the currentWebsite data
           isOpen={isModalOpen}
           onRequestClose={closeModal}
-          summary={currentWebsite.summary}
         />
       )}
     </div>

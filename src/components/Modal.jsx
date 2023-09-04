@@ -8,13 +8,8 @@ import '../styles/Modal.scss';
 // Set appElement to prevent "React-modal" app screen reader warnings
 Modal.setAppElement('#root');
 
-const CustomModal = ({ imageUrl, isOpen, onRequestClose }) => {
-  const similarWebsites = [
-    { name: 'Similar Website 1', imageUrl: '/nexus.png' },
-    { name: 'Similar Website 2', imageUrl: '/nexus.png' },
-    { name: 'Similar Website 3', imageUrl: '/nexus.png' },
-    // Add more similar websites here
-  ];
+const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
+  const { websiteTitle, summary, backgroundImageUrl, similarWebsites } = websiteData;
 
   return (
     <Modal
@@ -30,7 +25,7 @@ const CustomModal = ({ imageUrl, isOpen, onRequestClose }) => {
               <FontAwesomeIcon icon={faTimes} />
             </button>
           </div>
-          <img src={imageUrl} alt="website Poster" />
+          <img src={backgroundImageUrl} alt={`${websiteTitle} Poster`} />
           <div className="button-and-links">
             <button className="play-button">
               <FontAwesomeIcon icon={faPlay} /> Play
@@ -45,18 +40,17 @@ const CustomModal = ({ imageUrl, isOpen, onRequestClose }) => {
             </div>
           </div>
           <div className="website-info">
-            <h2>Website Title</h2>
-            <p>2023 | 1h 58m | Genre</p>
-            <p>Summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet aliquam arcu. Nulla facilisi.</p>
+            <h2>{websiteTitle}</h2>
+            <p>Summary: {summary}</p>
             <p>Collaborator: Wanda Arf</p>
           </div>
           <div className="more-like-this">
             <h3>More Like This</h3>
             <div className="similar-websites">
-              {similarWebsites.map((website, index) => (
+              {similarWebsites.map((similarWebsite, index) => (
                 <div className="similar-website" key={index}>
-                  <img src={website.imageUrl} alt={website.name} />
-                  <p>{website.name}</p>
+                  <img src={similarWebsite.imageUrl} alt={similarWebsite.name} />
+                  <p>{similarWebsite.name}</p>
                 </div>
               ))}
             </div>
