@@ -9,7 +9,7 @@ import '../styles/Modal.scss';
 Modal.setAppElement('#root');
 
 const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
-  const { websiteTitle, summary, backgroundImageUrl, similarWebsites } = websiteData;
+  const { websiteTitle, summary, collaborator, backgroundImageUrl, similarWebsites } = websiteData;
 
   return (
     <Modal
@@ -42,7 +42,7 @@ const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
           <div className="website-info">
             <h2>{websiteTitle}</h2>
             <p>Summary: {summary}</p>
-            <p>Collaborator: Wanda Arf</p>
+            {collaborator && <p>Collaborator: {collaborator}</p>}
           </div>
           <div className="more-like-this">
             <h3>More Like This</h3>
