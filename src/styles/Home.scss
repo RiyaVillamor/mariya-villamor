@@ -17,7 +17,6 @@
   }
 
   .background-poster {
-    background-image: url('https://occ-0-300-990.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABeMZkNnHuV8Y6pFrWEjxEZG8xvjo-JqEJzrBVbBo76pxXC9QOCBcJZZU0KjD8hONdRR6x9QAGgpUZCLr0ljFcZlBS1gjBo-Y5D6-.jpg?r=570'); 
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -25,6 +24,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+    background-repeat: no-repeat;
   }
 
   .header-logo {
