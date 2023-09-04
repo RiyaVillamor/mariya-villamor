@@ -16,25 +16,25 @@ const Home = () => {
     {
       seriesTitle: 'We link Worlds',
       websiteTitle: 'NEXUS',
-      summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur aliquet est, eget egestas metus congue vel. Donec sed urna sed tellus venenatis hendrerit. Nulla facilisi. Sed tristique tortor nec scelerisque.',
+      summary: 'a vibrant social networking platform, fostering connections, and empowering expression. It offers unique profiles, tailored content, and top-notch privacy for a fulfilling online experience. Join nexus now!',
       backgroundImageUrl: '/nexus1.png'
     },
     {
       seriesTitle: 'Introducing Canvas 2.0',
       websiteTitle: 'TECHBLAZERS',
-      summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet aliquam arcu. Nulla facilisi. Proin fringilla quam ac odio auctor facilisis. Vivamus auctor neque eu lectus egestas, at vulputate velit euismod.',
+      summary: ' is your go-to resource for web development. With a comprehensive library, coding language updates, and a vibrant community, it is the hub for aspiring developers. Dive in and blaze your tech trail.',
       backgroundImageUrl: '/techblazers1.png'
     },
     {
       seriesTitle: 'Your Ultimate Country Guide',
       websiteTitle: 'EXPLOREDIA',
-      summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet aliquam arcu. Nulla facilisi. Proin fringilla quam ac odio auctor facilisis. Vivamus auctor neque eu lectus egestas, at vulputate velit euismod.',
+      summary: 'is your gateway to global discovery. It offers flags, capitals, currencies, and essential information, empowering travelers, students, and explorers to explore the world effortlessly.',
       backgroundImageUrl: '/exploredia1.png'
     },
     {
       seriesTitle: 'Go On. Get your recipe out.',
       websiteTitle: 'CUISINA',
-      summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet aliquam arcu. Nulla facilisi. Proin fringilla quam ac odio auctor facilisis. Vivamus auctor neque eu lectus egestas, at vulputate velit euismod.',
+      summary: 'is a culinary haven for Filipinos seeking daily meal inspiration. With step-by-step recipes, course filters, and skill-building, it simplifies cooking for college students, solo-living adolescents, and adults.',
       backgroundImageUrl: '/cuisina1.png',
     },
     // Add array for other websites soon
