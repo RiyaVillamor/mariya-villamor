@@ -10,7 +10,7 @@ const Home = () => {
     {
       seriesTitle: "Hello, I'm",
       websiteTitle: 'MARIYA',
-      summary: 'a passionate web developer with a love for creating amazing web experiences. I enjoy working on both front-end and back-end technologies and am always excited to take on new challenges.',
+      summary: 'A passionate web developer with a love for creating amazing web experiences. I enjoy working on both front-end and back-end technologies and am always excited to take on new challenges.',
       backgroundImageUrl: '/mariyaposter1.png',
       backgroundImageUrlWText: '/mariyaposter.png',
       collaborator: null,
@@ -26,7 +26,7 @@ const Home = () => {
     {
       seriesTitle: 'We link Worlds',
       websiteTitle: 'NEXUS',
-      summary: 'a vibrant social networking platform, fostering connections, and empowering expression. It offers unique profiles, tailored content, and top-notch privacy for a fulfilling online experience. Join nexus now!',
+      summary: 'A vibrant social networking platform, fostering connections, and empowering expression. It offers unique profiles, tailored content, and top-notch privacy for a fulfilling online experience. Join nexus now!',
       backgroundImageUrl: '/nexus1.png',
       backgroundImageUrlWText: '/nexus.png',
       collaborator: 'Lymar Paller',
@@ -42,7 +42,7 @@ const Home = () => {
     {
       seriesTitle: 'Introducing Canvas 2.0',
       websiteTitle: 'TECHBLAZERS',
-      summary: ' is your go-to resource for web development. With a comprehensive library, coding language updates, and a vibrant community, it is the hub for aspiring developers. Dive in and blaze your tech trail.',
+      summary: ' Is your go-to resource for web development. With a comprehensive library, coding language updates, and a vibrant community, it is the hub for aspiring developers. Dive in and blaze your tech trail.',
       backgroundImageUrl: '/techblazers1.png',
       backgroundImageUrlWText: '/techblazers.png',
       collaborator: null,
@@ -58,7 +58,7 @@ const Home = () => {
     {
       seriesTitle: 'Your Ultimate Country Guide',
       websiteTitle: 'EXPLOREDIA',
-      summary: 'is your gateway to global discovery. It offers flags, capitals, currencies, and essential information, empowering travelers, students, and explorers to explore the world effortlessly.',
+      summary: 'Is your gateway to global discovery. It offers flags, capitals, currencies, and essential information, empowering travelers, students, and explorers to explore the world effortlessly.',
       backgroundImageUrl: '/exploredia1.png',
       backgroundImageUrlWText: '/exploredia.png',
       collaborator: 'Roldan Feliciano',
@@ -74,7 +74,7 @@ const Home = () => {
     {
       seriesTitle: 'Go On. Get your recipe out.',
       websiteTitle: 'CUSINA',
-      summary: 'is a culinary haven for Filipinos seeking daily meal inspiration. With step-by-step recipes, course filters, and skill-building, it simplifies cooking for college students, solo-living adolescents, and adults.',
+      summary: 'Is a culinary haven for Filipinos seeking daily meal inspiration. With step-by-step recipes, course filters, and skill-building, it simplifies cooking for college students, solo-living adolescents, and adults.',
       backgroundImageUrl: '/cusina1.png',
       backgroundImageUrlWText: '/cusina.png',
       collaborator: null,
