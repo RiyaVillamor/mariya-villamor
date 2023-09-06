@@ -112,7 +112,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
+    <div className="home" id="home">
       <div className="background-poster" style={{ backgroundImage: `url(${currentWebsite.backgroundImageUrl})` }}></div>
       <div className="home-body">
         <div className="header-logo">

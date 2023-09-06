@@ -25,7 +25,21 @@ const Header = () => {
             <img src="/mariya.png" alt="mariya-logo" />
           </NavLink>
           <ul>
-            <li><NavLink to="/" exact="true" activeclassname="active">Home</NavLink></li>
+            <li><NavLink
+              to="#"
+              activeclassname="active"
+              onClick={() => {
+                const continueWatchingSection = document.getElementById('home');
+                if (continueWatchingSection) {
+                  continueWatchingSection.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                }
+              }}
+            >
+              Home
+            </NavLink>
+            </li>
             <li><NavLink to="#" activeclassname="active" onClick={openModal}>About</NavLink></li>
             <li>
               <NavLink
@@ -62,15 +76,18 @@ const Header = () => {
           onRequestClose={closeModal}
           websiteData={{
             websiteTitle: 'MARIYA',
-            summary: 'a passionate web developer with a love for creating amazing web experiences...',
+            summary: 'A passionate web developer with a love for creating amazing web experiences. I enjoy working on both front-end and back-end technologies and am always excited to take on new challenges.',
             backgroundImageUrl: '/mariyaposter1.png',
+            backgroundImageUrlWText: '/mariyaposter.png',
             collaborator: null,
             techStackImages: ['/javascript.png', '/react.png', '/sass.png'],
             githubLink: 'https://github.com/RiyaVillamor/mariya-villamor',
             vercelLink: 'https://mariyavillamor.vercel.app/',
             similarWebsites: [
-              { name: 'Similar Website 1', imageUrl: '/nexus1.png' },
-              { name: 'Similar Website 2', imageUrl: '/techblazers1.png' },
+              { name: 'Nexus', imageUrl: '/nexus.png' },
+              { name: 'Techblazers', imageUrl: '/techblazers.png' },
+              { name: 'Exploredia', imageUrl: '/exploredia.png' },
+              { name: 'Cùsina', imageUrl: '/cusina.png' },
             ],
           }}
         />
