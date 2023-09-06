@@ -12,7 +12,7 @@ const Top10Websites = ({ handleWebsiteChange }) => {
     '/nexus.png',
     '/techblazers.png',
     '/exploredia.png',
-    '/cuisina.png',
+    '/cusina.png',
     // Add URLs for other websites
   ];
 

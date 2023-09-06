@@ -9,7 +9,7 @@ import '../styles/Modal.scss';
 Modal.setAppElement('#root');
 
 const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
-  const { websiteTitle, summary, collaborator, backgroundImageUrl, similarWebsites, githubLink, vercelLink } = websiteData;
+  const { websiteTitle, summary, collaborator, backgroundImageUrlWText, similarWebsites, githubLink, vercelLink } = websiteData;
 
   return (
     <Modal
@@ -25,7 +25,7 @@ const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
               <FontAwesomeIcon icon={faTimes} />
             </button>
           </div>
-          <img src={backgroundImageUrl} alt={`${websiteTitle} Poster`} />
+          <img src={backgroundImageUrlWText} alt={`${websiteTitle} Poster`} />
           <div className="button-and-links">
             <button className="play-button">
               <FontAwesomeIcon icon={faPlay} /> Play

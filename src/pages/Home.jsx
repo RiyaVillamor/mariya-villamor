@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faInfoCircle, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faPlay, faInfoCircle, } from '@fortawesome/free-solid-svg-icons';
 import Top10Websites from '../components/Top10Websites';
 import CustomModal from '../components/Modal';
 
@@ -13,12 +12,15 @@ const Home = () => {
       websiteTitle: 'MARIYA',
       summary: 'a passionate web developer with a love for creating amazing web experiences. I enjoy working on both front-end and back-end technologies and am always excited to take on new challenges.',
       backgroundImageUrl: '/mariyaposter1.png',
+      backgroundImageUrlWText: '/mariyaposter.png',
       collaborator: null,
       githubLink: 'https://github.com/RiyaVillamor/mariya-villamor',
       vercelLink: 'https://mariyavillamor.vercel.app/',
       similarWebsites: [
-        { name: 'Similar Website 1', imageUrl: '/nexus1.png' },
-        { name: 'Similar Website 2', imageUrl: '/techblazers1.png' },
+        { name: 'Nexus', imageUrl: '/nexus.png' },
+        { name: 'Techblazers', imageUrl: '/techblazers.png' },
+        { name: 'Exploredia', imageUrl: '/exploredia.png' },
+        { name: 'Cúsina', imageUrl: '/cusina.png' },
       ],
     },
     {
@@ -26,12 +28,15 @@ const Home = () => {
       websiteTitle: 'NEXUS',
       summary: 'a vibrant social networking platform, fostering connections, and empowering expression. It offers unique profiles, tailored content, and top-notch privacy for a fulfilling online experience. Join nexus now!',
       backgroundImageUrl: '/nexus1.png',
+      backgroundImageUrlWText: '/nexus.png',
       collaborator: 'Lymar Paller',
       githubLink: 'https://github.com/LymarPaller/nexus',
       vercelLink: 'https://nexus-three-ruddy.vercel.app/',
       similarWebsites: [
-        { name: 'Similar Website 1', imageUrl: '/mariyaposter1.png' },
-        { name: 'Similar Website 2', imageUrl: '/techblazers1.png' },
+        { name: 'Mariya', imageUrl: '/mariyaposter.png' },
+        { name: 'Techblazers', imageUrl: '/techblazers.png' },
+        { name: 'Exploredia', imageUrl: '/exploredia.png' },
+        { name: 'Cúsina', imageUrl: '/cusina.png' },
       ],
     },
     {
@@ -39,12 +44,15 @@ const Home = () => {
       websiteTitle: 'TECHBLAZERS',
       summary: ' is your go-to resource for web development. With a comprehensive library, coding language updates, and a vibrant community, it is the hub for aspiring developers. Dive in and blaze your tech trail.',
       backgroundImageUrl: '/techblazers1.png',
+      backgroundImageUrlWText: '/techblazers.png',
       collaborator: null,
       githubLink: 'https://github.com/RiyaVillamor/Techblazers',
       vercelLink: 'https://techblazers.vercel.app/',
-      similarWebsites: [
-        { name: 'Similar Website 1', imageUrl: '/nexus1.png' },
-        { name: 'Similar Website 2', imageUrl: '/mariyaposter1.png' },
+      similarWebsites:  [
+        { name: 'Mariya', imageUrl: '/mariyaposter.png' },
+        { name: 'Nexus', imageUrl: '/nexus.png' },
+        { name: 'Exploredia', imageUrl: '/exploredia.png' },
+        { name: 'Cúsina', imageUrl: '/cusina.png' },
       ],
     },
     {
@@ -52,26 +60,33 @@ const Home = () => {
       websiteTitle: 'EXPLOREDIA',
       summary: 'is your gateway to global discovery. It offers flags, capitals, currencies, and essential information, empowering travelers, students, and explorers to explore the world effortlessly.',
       backgroundImageUrl: '/exploredia1.png',
+      backgroundImageUrlWText: '/exploredia.png',
       collaborator: 'Roldan Feliciano',
       githubLink: 'https://github.com/RiyaVillamor/Exploredia',
       vercelLink: 'https://exploredia.vercel.app/',
       similarWebsites: [
-        // Add similar websites for EXPLOREDIA here
+        { name: 'Mariya', imageUrl: '/mariyaposter.png' },
+        { name: 'Nexus', imageUrl: '/nexus.png' },
+        { name: 'Techblazers', imageUrl: '/techblazers.png' },
+        { name: 'Cúsina', imageUrl: '/cusina.png' },
       ],
     },
     {
       seriesTitle: 'Go On. Get your recipe out.',
-      websiteTitle: 'CUISINA',
+      websiteTitle: 'CUSINA',
       summary: 'is a culinary haven for Filipinos seeking daily meal inspiration. With step-by-step recipes, course filters, and skill-building, it simplifies cooking for college students, solo-living adolescents, and adults.',
-      backgroundImageUrl: '/cuisina1.png',
+      backgroundImageUrl: '/cusina1.png',
+      backgroundImageUrlWText: '/cusina.png',
       collaborator: null,
       githubLink: 'https://github.com/RiyaVillamor/Cuisina',
       vercelLink: 'https://vercel.com/', // CHANGE Vercel link here soon
       similarWebsites: [
-        // Add similar websites for CUISINA here
+        { name: 'Mariya', imageUrl: '/mariyaposter.png' },
+        { name: 'Nexus', imageUrl: '/nexus.png' },
+        { name: 'Techblazers', imageUrl: '/techblazers.png' },
+        { name: 'Exploredia', imageUrl: '/exploredia.png' },
       ],
     },
-    // Add configurations for other websites
   ];
 
   const [currentWebsiteIndex, setCurrentWebsiteIndex] = useState(0);
@@ -123,7 +138,7 @@ const Home = () => {
       {/* Check if the modal should be open and render it */}
       {isModalOpen && (
         <CustomModal
-          websiteData={currentWebsite} // Pass the currentWebsite data
+          websiteData={currentWebsite}  
           isOpen={isModalOpen}
           onRequestClose={closeModal}
         />
