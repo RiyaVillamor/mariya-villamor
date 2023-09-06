@@ -20,7 +20,7 @@ const Home = () => {
         { name: 'Nexus', imageUrl: '/nexus.png' },
         { name: 'Techblazers', imageUrl: '/techblazers.png' },
         { name: 'Exploredia', imageUrl: '/exploredia.png' },
-        { name: 'Cúsina', imageUrl: '/cusina.png' },
+        { name: 'Cùsina', imageUrl: '/cusina.png' },
       ],
     },
     {
@@ -36,7 +36,7 @@ const Home = () => {
         { name: 'Mariya', imageUrl: '/mariyaposter.png' },
         { name: 'Techblazers', imageUrl: '/techblazers.png' },
         { name: 'Exploredia', imageUrl: '/exploredia.png' },
-        { name: 'Cúsina', imageUrl: '/cusina.png' },
+        { name: 'Cùsina', imageUrl: '/cusina.png' },
       ],
     },
     {
@@ -52,7 +52,7 @@ const Home = () => {
         { name: 'Mariya', imageUrl: '/mariyaposter.png' },
         { name: 'Nexus', imageUrl: '/nexus.png' },
         { name: 'Exploredia', imageUrl: '/exploredia.png' },
-        { name: 'Cúsina', imageUrl: '/cusina.png' },
+        { name: 'Cùsina', imageUrl: '/cusina.png' },
       ],
     },
     {
@@ -68,7 +68,7 @@ const Home = () => {
         { name: 'Mariya', imageUrl: '/mariyaposter.png' },
         { name: 'Nexus', imageUrl: '/nexus.png' },
         { name: 'Techblazers', imageUrl: '/techblazers.png' },
-        { name: 'Cúsina', imageUrl: '/cusina.png' },
+        { name: 'Cùsina', imageUrl: '/cusina.png' },
       ],
     },
     {
