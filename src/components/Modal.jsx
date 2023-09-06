@@ -45,8 +45,8 @@ const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
           </div>
           <div className="website-info">
             <h2>{websiteTitle}</h2>
-            <p>Summary: {summary}</p>
-            {collaborator && <p>Collaborator: {collaborator}</p>}
+            <p><span>Summary:</span> {summary}</p>
+            {collaborator && <p><span>Collaborator:</span> {collaborator}</p>}
           </div>
           <div className="more-like-this">
             <h3>More Like This</h3>
