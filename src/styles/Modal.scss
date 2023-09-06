@@ -52,7 +52,7 @@
     gap: 20px;
     position: relative;
     margin-top: -18px;
-   
+
     .button-and-links {
       display: flex;
       justify-content: space-between;
@@ -77,8 +77,24 @@
       border-radius: .5rem;
       /* Remove border-radius */
       object-fit: cover;
-    
+
     }
+
+    .tech-stack {
+      display: flex;
+      align-items: center;
+      gap: .2rem;
+      color: var(--grey-600);
+
+
+      img {
+        width: 23px;
+        height: 23px;
+
+      }
+    }
+
+
 
     .close-button {
       background-color: var(--grey-800);
@@ -130,16 +146,19 @@
       font-size: 1rem;
       margin-bottom: 0.5rem;
       line-height: 1.2rem;
-     
+      color: var(--white);
+
       span {
         color: var(--grey-600);
+
       }
     }
+
   }
 
   .more-like-this {
     text-align: left;
-    margin-top: 20px;
+    margin-top: 3rem;
 
     h3 {
       font-size: 1.2rem;
@@ -168,4 +187,8 @@
       }
     }
   }
+}
+
+.collab {
+  margin: .5rem;
 }

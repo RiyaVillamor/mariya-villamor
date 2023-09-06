@@ -5,11 +5,10 @@ import { faPlay, faTimes, faExternalLinkAlt } from '@fortawesome/free-solid-svg-
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Modal.scss';
 
-// Set appElement to prevent "React-modal" app screen reader warnings
 Modal.setAppElement('#root');
 
 const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
-  const { websiteTitle, summary, collaborator, backgroundImageUrlWText, similarWebsites, githubLink, vercelLink } = websiteData;
+  const { websiteTitle, summary, collaborator, techStackImages, backgroundImageUrlWText, similarWebsites, githubLink, vercelLink } = websiteData;
 
   return (
     <Modal
@@ -46,17 +45,25 @@ const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
           <div className="website-info">
             <h2>{websiteTitle}</h2>
             <p><span>Summary:</span> {summary}</p>
-            {collaborator && <p><span>Collaborator:</span> {collaborator}</p>}
-          </div>
-          <div className="more-like-this">
-            <h3>More Like This</h3>
-            <div className="similar-websites">
-              {similarWebsites.map((website, index) => (
-                <div className="similar-website" key={index}>
-                  <img src={website.imageUrl} alt={`${website.name} Poster`} />
-                  <p>{website.name}</p>
-                </div>
-              ))}
+            <div className="tech-stack">
+              <span>Technology Stack Used:</span>
+              <div className="tech-stack">
+                {techStackImages.map((image, index) => (
+                  <img key={index} src={image} alt={`Tech Stack ${index + 1}`} />
+                ))}
+              </div>
+              {collaborator && <p className="collab"><span>Collaborator:</span> {collaborator}</p>}
+            </div>
+            <div className="more-like-this">
+              <h3>More Like This</h3>
+              <div className="similar-websites">
+                {similarWebsites.map((website, index) => (
+                  <div className="similar-website" key={index}>
+                    <img src={website.imageUrl} alt={`${website.name} Poster`} />
+                    <p>{website.name}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faInfoCircle, } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import Top10Websites from '../components/Top10Websites';
 import CustomModal from '../components/Modal';
 
@@ -14,6 +14,7 @@ const Home = () => {
       backgroundImageUrl: '/mariyaposter1.png',
       backgroundImageUrlWText: '/mariyaposter.png',
       collaborator: null,
+      techStackImages: ['/javascript.png', '/react.png', '/sass.png'],
       githubLink: 'https://github.com/RiyaVillamor/mariya-villamor',
       vercelLink: 'https://mariyavillamor.vercel.app/',
       similarWebsites: [
@@ -30,6 +31,7 @@ const Home = () => {
       backgroundImageUrl: '/nexus1.png',
       backgroundImageUrlWText: '/nexus.png',
       collaborator: 'Lymar Paller',
+      techStackImages: ['/javascript.png', '/react.png', '/sass.png', 'php.png', 'laravel.png',],
       githubLink: 'https://github.com/LymarPaller/nexus',
       vercelLink: 'https://nexus-three-ruddy.vercel.app/',
       similarWebsites: [
@@ -42,13 +44,14 @@ const Home = () => {
     {
       seriesTitle: 'Introducing Canvas 2.0',
       websiteTitle: 'TECHBLAZERS',
-      summary: ' Is your go-to resource for web development. With a comprehensive library, coding language updates, and a vibrant community, it is the hub for aspiring developers. Dive in and blaze your tech trail.',
+      summary: 'Is your go-to resource for web development. With a comprehensive library, coding language updates, and a vibrant community, it is the hub for aspiring developers. Dive in and blaze your tech trail.',
       backgroundImageUrl: '/techblazers1.png',
       backgroundImageUrlWText: '/techblazers.png',
       collaborator: null,
+      techStackImages: ['/javascript.png', '/react.png', '/sass.png'],
       githubLink: 'https://github.com/RiyaVillamor/Techblazers',
       vercelLink: 'https://techblazers.vercel.app/',
-      similarWebsites:  [
+      similarWebsites: [
         { name: 'Mariya', imageUrl: '/mariyaposter.png' },
         { name: 'Nexus', imageUrl: '/nexus.png' },
         { name: 'Exploredia', imageUrl: '/exploredia.png' },
@@ -62,6 +65,7 @@ const Home = () => {
       backgroundImageUrl: '/exploredia1.png',
       backgroundImageUrlWText: '/exploredia.png',
       collaborator: 'Roldan Feliciano',
+      techStackImages: ['/html.png', '/css.png', '/javascript.png', 'bootstrap.png'],
       githubLink: 'https://github.com/RiyaVillamor/Exploredia',
       vercelLink: 'https://exploredia.vercel.app/',
       similarWebsites: [
@@ -78,6 +82,7 @@ const Home = () => {
       backgroundImageUrl: '/cusina1.png',
       backgroundImageUrlWText: '/cusina.png',
       collaborator: null,
+      techStackImages: ['/html.png', '/css.png', '/javascript.png',],
       githubLink: 'https://github.com/RiyaVillamor/Cuisina',
       vercelLink: 'https://vercel.com/', // CHANGE Vercel link here soon
       similarWebsites: [
@@ -135,7 +140,6 @@ const Home = () => {
         </div>
         <Top10Websites websiteConfigs={websiteConfigs} handleWebsiteChange={handleWebsiteChange} />
       </div>
-      {/* Check if the modal should be open and render it */}
       {isModalOpen && (
         <CustomModal
           websiteData={currentWebsite}  
