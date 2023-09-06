@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faTimes, faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faTimes, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Modal.scss';
 
@@ -33,12 +33,12 @@ const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
             <div className="website-links">
               {githubLink && (
                 <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faGithub} /> 
+                  <FontAwesomeIcon icon={faGithub} />
                 </a>
               )}
               {vercelLink && (
                 <a href={vercelLink} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faExternalLinkAlt} /> 
+                  <FontAwesomeIcon icon={faExternalLinkAlt} />
                 </a>
               )}
             </div>
@@ -51,10 +51,10 @@ const CustomModal = ({ websiteData, isOpen, onRequestClose }) => {
           <div className="more-like-this">
             <h3>More Like This</h3>
             <div className="similar-websites">
-              {similarWebsites.map((similarWebsite, index) => (
+              {similarWebsites.map((website, index) => (
                 <div className="similar-website" key={index}>
-                  <img src={similarWebsite.imageUrl} alt={similarWebsite.name} />
-                  <p>{similarWebsite.name}</p>
+                  <img src={website.imageUrl} alt={`${website.name} Poster`} />
+                  <p>{website.name}</p>
                 </div>
               ))}
             </div>
