@@ -24,7 +24,7 @@ const Top10Websites = ({ handleWebsiteChange }) => {
 
   return (
     <div className="top-10-items">
-      <h2>Continue Watching</h2>
+      <h2 id="continue-watching">Continue Watching</h2>
       <div className="item-list">
         {currentItems.map((item, index) => (
           <div key={index} className="item-item" onClick={() => handleWebsiteChange(indexOfFirstItem + index)}>

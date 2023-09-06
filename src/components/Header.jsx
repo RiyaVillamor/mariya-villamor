@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'; 
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -16,7 +16,23 @@ const Header = () => {
           <ul>
             <li><NavLink exact to="/home" activeClassName="active">Home</NavLink></li>
             <li><NavLink to="#" activeClassName="active">About</NavLink></li>
-            <li><NavLink to="#" activeClassName="active">Projects</NavLink></li>
+            <li>
+              <NavLink
+                to="#"
+                activeClassName="active"
+                onClick={() => {
+                  const continueWatchingSection = document.getElementById('continue-watching');
+                  if (continueWatchingSection) {
+                    continueWatchingSection.scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }
+                }}
+              >
+                Projects
+              </NavLink>
+            </li>
+
             <li><NavLink to="#" activeClassName="active">Contact</NavLink></li>
           </ul>
         </div>
