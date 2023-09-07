@@ -5,6 +5,7 @@ import { faPlay, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import Top10Websites from '../components/Top10Websites';
 import CustomModal from '../components/Modal';
 
+
 const Home = () => {
   const websiteConfigs = [
     {

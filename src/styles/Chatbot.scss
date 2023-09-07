@@ -1,0 +1,132 @@
+@import 'main';
+
+.chatbot {
+    position: fixed;
+    bottom: 1.3rem;
+    right: 1.3rem;
+    background-color: var(--primary-500);
+    border: 2px solid var(--accent-400);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    width: 100%;
+    height: 500px;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+
+    .bot-header {
+        width: 100%;
+        height: 2.7rem;
+        background-color: var(--accent-400);
+        display: flex;
+        align-items: center;
+
+        .bot-avatar {
+            background-color: var(--primary-500);
+            border-radius: 50%;
+            height: 2.3rem;
+            width: 2.3rem;
+            margin-left: 0.2rem;
+            margin-right: 5px;
+            padding: 0.3rem;
+        }
+
+        p {
+            font-family: $headingFont;
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: bold;
+            margin-left: 5rem;
+        }
+
+        .close-button {
+            display: flex;
+            align-items: center;
+            border: none;
+            background: none;
+            cursor: pointer;
+            margin-left: auto;
+            font-size: 1.5rem;
+            padding: 0.3rem;
+            color: var(--white);
+
+            .close-icon {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .chat-messages {
+        flex-grow: 1;
+        padding: 1rem;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: transparent;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent;
+            border-radius: 3px;
+        }
+    }
+
+    .message-container {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: .1rem;
+        padding: .5rem;
+
+        &.user-message {
+            flex-direction: row-reverse;
+        }
+
+        .profile-avatar {
+            background-color: var(--grey-900);
+            border-radius: 50%;
+            height: 2.3rem;
+            width: 2.3rem;
+            padding: 0.3rem;
+            margin-right: .8rem;
+            margin-left: -1rem;
+        }
+
+        .message {
+            text-align: left;
+            background-color: var(--grey-900);
+            color: var(--white);
+            border-radius: 3px;
+            display: inline-block;
+            padding: .4rem;
+        }
+    }
+
+    .choices {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 10px;
+        padding-left: 10px;
+
+        button {
+            background-color: var(--accent-400);
+            color: var(--white);
+            border: none;
+            border-radius: 3px;
+            padding: 10px;
+            margin-top: 5px;
+            cursor: pointer;
+            text-align: right;
+            max-width: 80%;
+            word-wrap: break-word;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: var(--accent-500);
+            }
+        }
+    }
+}

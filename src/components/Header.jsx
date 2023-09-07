@@ -5,6 +5,7 @@ import { faMoon, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Header.scss';
 import CustomModal from '../components/Modal';
+import Chatbot from '../components/Chatbot';
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,6 +18,17 @@ const Header = () => {
     setIsModalOpen(false);
   };
 
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
+
+  const openChatbot = () => {
+    setIsChatbotOpen(true);
+  };
+
+  const closeChatbot = () => {
+    setIsChatbotOpen(false);
+  };
+
+
   return (
     <header className="header">
       <div className="header-content">
@@ -25,21 +37,7 @@ const Header = () => {
             <img src="/mariya.png" alt="mariya-logo" />
           </NavLink>
           <ul>
-            <li><NavLink
-              to="#"
-              activeclassname="active"
-              onClick={() => {
-                const continueWatchingSection = document.getElementById('home');
-                if (continueWatchingSection) {
-                  continueWatchingSection.scrollIntoView({
-                    behavior: 'smooth',
-                  });
-                }
-              }}
-            >
-              Home
-            </NavLink>
-            </li>
+            <li><NavLink to="/home" activeclassname="active">Home</NavLink></li>
             <li><NavLink to="#" activeclassname="active" onClick={openModal}>About</NavLink></li>
             <li>
               <NavLink
@@ -57,7 +55,11 @@ const Header = () => {
                 Projects
               </NavLink>
             </li>
-            <li><NavLink to="#" activeclassname="active">Contact</NavLink></li>
+            <li>
+              <NavLink to="#" activeClassName="active" onClick={openChatbot}>
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="header-icons">
@@ -92,6 +94,7 @@ const Header = () => {
           }}
         />
       )}
+      {isChatbotOpen && <Chatbot onClose={closeChatbot} />}
     </header>
   );
 };
